@@ -1,471 +1,449 @@
-<!DOCTYPE html>
-<html lang="">
+<!doctype html>
+<html lang="es">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DISAINAX</title>
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="stylesheet" href="./doc.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <link rel="stylesheet" href="./css/lightbox.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- font awesome 5 free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Poppins font from Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/app.css">
+
+    <title>Frontendor | Component</title>
 </head>
 
 <body>
-    <div class="contenedor">
-        <nav class="navbar">
-            <div class="inner-width">
-                <a href="index.html" class="logo"></a>
-                <button class="menu-toggler">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="navbar-menu">
-                    <a href="#home">Inicio</a>
-                    <a href="#works">Diseños</a>
-                    <a href="#planes">Planes</a>
-                    <a href="#contactanos">Contáctanos</a>
-                </div>
-            </div>
+
+    <!--Hero ====================================== -->
+    <header class="hero container-fluid border-bottom">
+        <nav class="hero-nav container px-4 px-lg-0 mx-auto">
+            <ul class="nav w-100 list-unstyled align-items-center p-0">
+                <li class="hero-nav__item">
+                    <img class="hero-nav__logo" src="assets/imgs/logo.svg">
+                </li>
+                <li id="hero-menu" class="flex-grow-1 hero__nav-list hero__nav-list--mobile-menu ft-menu">
+                    <ul class="hero__menu-content nav flex-column flex-lg-row ft-menu__slider animated list-unstyled p-2 p-lg-0">
+                        <li class="flex-grow-1">
+                            <ul class="nav nav--lg-side list-unstyled align-items-center p-0">
+                                <li class="hero-nav__item">
+                                    <a href="#contact-us" class="hero-nav__link">Contáctanos</a>
+                                </li>
+                                <li class="hero-nav__item">
+                                    <a href="#faq" class="hero-nav__link">Preguntas Frecuentes</a>
+                                </li>
+                                <li class="hero-nav__item">
+                                    <a href="#features" class="hero-nav__link">Servicio</a>
+                                </li>
+                                <li class="hero-nav__item">
+                                    <a href="#product" class="hero-nav__link">Ventajas</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button onclick="document.querySelector('#hero-menu').classList.toggle('ft-menu--js-show')" class="ft-menu__close-btn animated">
+            <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+                </li>
+                <li class="d-lg-none flex-grow-1 d-flex flex-row-reverse hero-nav__item">
+                    <button onclick="document.querySelector('#hero-menu').classList.toggle('ft-menu--js-show')" class="text-center px-2">
+            <i class="fas fa-bars"></i>
+          </button>
+                </li>
+            </ul>
         </nav>
-
-        <section id="home">
-            <div class="inner-width">
-                <div class="content">
-                    <h1></h1>
-                    <div class="sm">
-                        <a href="https://www.facebook.com/disainax-104847694389125/" class="fab fa-facebook-f"></a>
-                        <a href="http://api.whatsapp.com/send?phone=584123887600&text=hola%20Disainax" class="fab fa-whatsapp"></a>
-                        <a href="https://instagram.com/disainax?igshid=1kx0peie0c57c" class="fab fa-instagram"></a>
+        <div class="hero__content container mx-auto">
+            <div class="row px-0 mx-0 align-items-center">
+                <div class="col-lg-6 px-0">
+                    <h1 class="hero__title mb-3">
+                        SÓMOS <span class="highlight">DISAINAX</span> TU CASA DE CAMBIOS CONFIABLE
+                    </h1>
+                    <p class="hero__paragraph mb-5">
+                        Hacer tus envíos nunca fue tan fácil, te ofrecemos un servicio de cálidad.
+                    </p>
+                    <div class="hero__btns-container">
+                        <a class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
+              Contáctanos
+            </a>
                     </div>
-                    <div class="buttons">
-                        <a href="#">Contactanos</a>
-                        <a href="#comienza">¡Comienza ya!</a>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0 mx-0">
+                    <div class="hero__img-container">
+                        <img src="assets/imgs/img-1.png" class="hero__img w-100">
                     </div>
                 </div>
             </div>
-        </section>
-
-        <div class="castor"></div>
-
-        <div class="contenido" id="comienza">
-
-            <div class="ofertas">
-                <div class="oferta o2 ">
-
-                    <div class="descripcion-ofertas">
-                        <div class="titulo-descripcion">
-                            ¿Quienes somos?
-                        </div>
-                        <div class="textos">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque totam, tempore, fugiat id voluptate non unde tempora nemo rem minima nesciunt ab quisquam quod, repellendus. Veniam placeat id hic accusantium!</h3>
-                        </div>
-                    </div>
-                    <div id="video">
-                        <video controls preload loop autoplay>
-                            <source src="./video/1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="oferta o1">
-                    <div class="imga-oferta aparece"><img src="./img/posicionamiento.png" alt=""></div>
-                    <div class="descripcion-ofertas">
-                        <div class="titulo-descripcion">
-                            titulo
-                        </div>
-                        <div class="textos">
-                            <h3>Te ayudamos a ti y a tu compañia a crecer con ayuda de nuestros diseños para que puedas tener profesionalismo
-                                y puedas marcar la diferenca en el mercado, con ayuda de nuestros diferentes planes inicia ya con nosotros</h3> <br>
-                        </div>
-
-                        <a href="https://www.facebook.com/disainax-104847694389125/"><img src="./img/facebook.png" class="icono"></a>
-                        <a href="http://api.whatsapp.com/send?phone=584123887600&text=hola%20Disainax" target="_blank"><img src="./img/WhatsApp.png" class="icono"></a>
-
-                        <a href="https://instagram.com/disainax?igshid=1kx0peie0c57c"><img src="./img/instagram.png" class="icono"></a>
-
-                    </div>
-                </div>
-
-                <div class="oferta o2">
-
-                    <div class="descripcion-ofertas">
-                        <div class="titulo-descripcion">
-                            Equipo creativo
-                        </div>
-                        <div class="textos">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque totam, tempore, fugiat id voluptate non unde tempora nemo rem minima nesciunt ab quisquam quod, repellendus. Veniam placeat id hic accusantium!</h3>
-                        </div>
-                        <a href="https://www.facebook.com/disainax-104847694389125/"><img src="./img/facebook.png" class="icono"></a>
-
-                        <img src="./img/WhatsApp.png" class="icono">
-                        <a href="https://instagram.com/disainax?igshid=1kx0peie0c57c"><img src="./img/instagram.png" class="icono"></a>
-                    </div>
-                    <div class="imga-oferta aparece"><img src="./img/equipo.png" alt=""></div>
-                </div>
-
-                <div class="oferta o3">
-                    <div class="imga-oferta aparece"><img src="./img/aumento.png" alt=""></div>
-                    <div class="descripcion-ofertas">
-                        <div class="titulo-descripcion">
-                            Gestionamos tus cuentas
-                        </div>
-                        <div class="textos">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque totam, tempore, fugiat id voluptate non unde tempora nemo rem minima nesciunt ab quisquam quod, repellendus. Veniam placeat id hic accusantium!</h3><br>
-
-                        </div>
-                        <a href="https://www.facebook.com/disainax-104847694389125/"><img src="./img/facebook.png" class="icono"></a>
-                        <img src="./img/WhatsApp.png" class="icono">
-                        <a href="https://instagram.com/disainax?igshid=1kx0peie0c57c"><img src="./img/instagram.png" class="icono"></a>
-                    </div>
-                </div>
-
-                <div class="oferta o4">
-
-                    <div class="descripcion-ofertas">
-                        <div class="titulo-descripcion">
-                            Somos confiables
-                        </div>
-                        <div class="textos">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque totam, tempore, fugiat id voluptate non unde tempora nemo rem minima nesciunt ab quisquam quod, repellendus. Veniam placeat id hic accusantium!</h3><br>
-                        </div>
-                        <a href="https://www.facebook.com/disainax-104847694389125/"><img src="./img/facebook.png" class="icono"></a>
-                        <img src="./img/WhatsApp.png" class="icono">
-                        <a href="https://instagram.com/disainax?igshid=1kx0peie0c57c"><img src="./img/instagram.png" class="icono"></a>
-                    </div>
-                    <div class="imga-oferta aparece"><img src="./img/seguro.png" alt=""></div>
-                </div>
-            </div>
-            <h1>DISEÑOS CREATIVOS</h1>
-            <div class="skew">
-
-            </div>
-
-            <!-- Works -->
-            <section id="works" class="dark">
-                <div class="inner-width">
-                    <h1 class="section-title">Diseños</h1>
-                    <div class="works">
-                        <a href="./img/mg2.jpeg" class="work" data-lightbox="mygallery">
-                            <img src="./img/mg2.jpeg" alt="">
-                        </a>
-
-                        <a href="img/img5.jpeg" class="work" data-lightbox="mygallery">
-                            <img src="img/img5.jpeg" alt="">
-                        </a>
-
-                        <a href="img/img3.jpeg" class="work" data-lightbox="mygallery">
-                            <img src="img/img3.jpeg" alt="">
-                        </a>
-
-                        <a href="img/img.jpeg" class="work" data-lightbox="mygallery">
-                            <img src="img/img.jpeg" alt="">
-                        </a>
-
-                        <a href="img/img3.jpeg" class="work" data-lightbox="mygallery">
-                            <img src="img/img3.jpeg" alt="">
-                        </a>
-
-                        <a href="img/img.jpeg" class="work" data-lightbox="mygallery">
-                            <img src="img/img.jpeg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!----------------------------------------------------------------PLANES--------------------------------------------------------------------->
-
-            <div id="planes" class="pricing-table">
-                <div class="pricing-card">
-                    <h3 class="pricing-card-header">Básico</h3>
-                    <div class="price"><sup>$</sup>25</div>
-                    <ul>
-                        <li><strong>1</strong> Gestion de cuentas de instagram</li>
-                        <li><strong>2</strong> Publicaciones diarias + historias</li>
-                        <li><strong>1</strong> Diseño de Banner</li>
-                        <li><strong>1</strong> Interaccion con los usuarios</li>
-                        <li><strong>1</strong> Estudio de la competencia</li>
-                        <li><strong>1</strong> Calendario de Publiciones</li>
-                        <li><strong>1</strong> Diseño de historias destacadas</li>
-                    </ul>
-                    <a href="#" class="order-btn">Obtener</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3 class="pricing-card-header">Personal</h3>
-                    <div class="price"><sup>$</sup>40</div>
-                    <ul>
-                        <li><strong>1</strong> Gestion de cuentas de instagram</li>
-                        <li><strong>2</strong> Publicaciones diarias + historias</li>
-                        <li><strong>1</strong> Diseño de Banner</li>
-                        <li><strong>1</strong> Interaccion con los usuarios</li>
-                        <li><strong>1</strong> Estudio de la competencia</li>
-                        <li><strong>1</strong> Calendario de Publiciones</li>
-                        <li><strong>1</strong> Diseño de historias destacadas</li>
-                    </ul>
-                    <a href="#" class="order-btn">Obtener</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3 class="pricing-card-header">Empresarial</h3>
-                    <div class="price"><sup>$</sup>55</div>
-                    <ul>
-                        <li><strong>1</strong> Gestion de cuentas de instagram</li>
-                        <li><strong>2</strong> Publicaciones diarias + historias</li>
-                        <li><strong>1</strong> Diseño de Banner</li>
-                        <li><strong>1</strong> Interaccion con los usuarios</li>
-                        <li><strong>1</strong> Estudio de la competencia</li>
-                        <li><strong>1</strong> Calendario de Publiciones</li>
-                        <li><strong>1</strong> Diseño de historias destacadas</li>
-                    </ul>
-                    <a href="#" class="order-btn">Obtener</a>
-                </div>
-
-            </div>
-
-            <!----------------------------------------------------------------PLANES--------------------------------------------------------------------->
-
-
         </div>
+    </header>
 
+    <!-- ===================================== -->
 
-        <!-- Contact -->
-        <div id="contactanos"></div>
-        <section id="contact">
-            <div class="inner-width">
-                <h1 class="section-title">Contáctanos</h1>
-                <div class="contact-info">
-                    <div class="item">
-                        <i class="fas fa-mobile-alt"></i>
-                        +58 4167344377
+    <div id="product" class="block-5 space-between-blocks">
+        <div class="container">
+            <!-- HEADER -->
+            <div class="col-lg-8 col-xl-7 mx-auto text-center mb-5">
+                <h1 class="block__title mb-3">Ventajas de Enviar Con <span class="highlight"> Nosotros</span></h1>
+                <p class="block__paragraph mb-0">
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard
+                </p>
+            </div>
+            <div class="row align-items-center flex-column-reverse flex-lg-row px-2">
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-4">
+                    <div class="card-2 d-flex flex-row flex-lg-row-reverse">
+                        <div>
+                            <span class="card-2__symbol mx-auto">
+                <i class="fas fa-heartbeat"></i>
+              </span>
+                        </div>
+                        <div class="px-2"></div>
+                        <div>
+                            <h3 class="card-2__title mb-2">Ventaja 1</h3>
+                            <p class="card-2__paragraph">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="item">
-                        <i class="fas fa-envelope"></i>
-                        disainax@gmail.com
+                    <div class="card-2 d-flex flex-row flex-lg-row-reverse">
+                        <div>
+                            <span class="card-2__symbol mx-auto">
+                <i class="fas fa-briefcase-medical"></i>
+              </span>
+                        </div>
+                        <div class="px-2"></div>
+                        <div>
+                            <h3 class="card-2__title mb-2">Ventaja 2</h3>
+                            <p class="card-2__paragraph">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Venezuela, Estado Guárico
+                    <div class="card-2 d-flex flex-row flex-lg-row-reverse">
+                        <div>
+                            <span class="card-2__symbol mx-auto">
+                <i class="fas fa-bell"></i>
+              </span>
+                        </div>
+                        <div class="px-2"></div>
+                        <div>
+                            <h3 class="card-2__title mb-2">Ventaja 3</h3>
+                            <p class="card-2__paragraph">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
                     </div>
                 </div>
-
-               <h1 class="section-title">¡Envianos un mensaje!</h1>
-                <form action="#" class="contact-form">
-                   
-                    <input id="inputname" type="text" class="nameZone" required="" placeholder="Nombre Completo">
-                    <input id="inputcorreo" type="email" class="emailZone" placeholder="Tu Correo Electrónico">
-                    <input id="inputubicacion" type="text" class="subjectZone" placeholder="Ubicación">
-                    <textarea id="inputmensaje" class="messageZone" required="" placeholder="Escribenos un Mensaje"></textarea>
-                    <input type="submit" id="sendbttn" value="Enviar Mensaje" class="btn">
-                </form>
-            </div>
-        </section>
-
-        <div class="testimonial">
-            <div class="titulo_testimonial">
-                <h1>Equipo Disainax</h1>
-            </div>
-            <div class="cuerpo_testimonio aparece">
-                <div class="perfil">
-                    <div class="foto1">
-
+                <!-- IMAGE -->
+                <div class="col-lg-4 my-5 text-center">
+                    <img src="assets/imgs/img-2.png" class="w-75">
+                </div>
+                <!-- RIGHT CONTENT -->
+                <div class="col-lg-4">
+                    <div class="card-2 d-flex">
+                        <div>
+                            <span class="card-2__symbol mx-auto">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+                        </div>
+                        <div class="px-2"></div>
+                        <div>
+                            <h3 class="card-2__title mb-2">Ventaja 4</h3>
+                            <p class="card-2__paragraph">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-2 d-flex">
+                        <div>
+                            <span class="card-2__symbol mx-auto">
+                <i class="fas fa-fingerprint"></i>
+              </span>
+                        </div>
+                        <div class="px-2"></div>
+                        <div>
+                            <h3 class="card-2__title mb-2">Ventaja 5</h3>
+                            <p class="card-2__paragraph">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-2 d-flex">
+                        <div>
+                            <span class="card-2__symbol mx-auto">
+                <i class="fas fa-mobile"></i>
+              </span>
+                        </div>
+                        <div class="px-2"></div>
+                        <div>
+                            <h3 class="card-2__title mb-2">Ventaja 6</h3>
+                            <p class="card-2__paragraph">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <h1>Marcos Hernandez</h1>
-            </div>
-
-            <div class="cuerpo_testimonio aparece">
-                <div class="perfil">
-                    <div class="foto2">
-
-                    </div>
-                </div>
-                <h1>Loreana Urbano</h1>
-            </div>
-
-            <div class="cuerpo_testimonio aparece">
-                <div class="perfil">
-                    <div class="foto3">
-
-                    </div>
-                </div>
-                <h1>Diego Urbano</h1>
-            </div>
-
-            <div class="cuerpo_testimonio aparece">
-                <div class="perfil">
-                    <div class="foto4">
-
-                    </div>
-                </div>
-                <h1>Janideisy Matute</h1>
-            </div>
-
-            <div class="cuerpo_testimonio aparece">
-                <div class="perfil">
-                    <div class="foto5">
-
-                    </div>
-                </div>
-                <h1>Diego Fernández</h1>
             </div>
         </div>
     </div>
-    <!--------------------------------------Chat de WhatsApp---------------------------------------------->
-    <style>
-        .image-icon-whatsapp {
-            position: fixed;
-            bottom: 0px;
-            right: 0px;
-            cursor: pointer;
-            transition: all 0.2s;
-            width: 60px;
-            height: 60px;
-        }
 
-        .image-icon-whatsapp:hover {
-            transform: scale(0.9);
-        }
+    <!-- ===================================== -->
 
-        .image-icon-whatsapp:active {
-            transform: scale(0.8);
-        }
-
-        .formulariowtsp {
-            width: 320px;
-            height: 380px;
-            background: orange;
-            border-radius: 5px;
-            position: fixed;
-            bottom: 90px;
-            right: 60px;
-            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.22);
-            background: white;
-            padding: 5px 10px;
-            display: none;
-        }
-
-        form>label {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .inputwts {
-            width: 100%;
-            height: 40px;
-            box-sizing: border-box;
-            padding: 5px;
-            font-family: arial;
-            font-size: 13px;
-            border-radius: 5px;
-            border: 1px solid rgba(0, 0, 0, 0.19);
-            color: #666;
-        }
-
-        .inputwts:hover {
-            background-color: transparent;
-        }
-
-        .inputwts:focus {
-            outline: none;
-        }
-
-        .textareawts {
-            width: 100%;
-            min-width: 100%;
-            box-sizing: border-box;
-            height: 140px;
-            max-height: 140px;
-            min-height: 140px;
-            font-family: arial;
-            font-size: 13px;
-            border-radius: 5px;
-            padding: 5px;
-            border: 1px solid rgba(0, 0, 0, 0.19);
-            color: #666;
-
-
-        }
-
-        .textareawts:focus {
-            outline: none;
-        }
-
-        .newmessagewts {
-            font-family: arial;
-            display: block;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-            line-height: 10px;
-        }
-
-        .btnwtsp {
-            width: 100%;
-            border: none;
-            padding: 5px;
-            background: #00a82d;
-            border-radius: 5px;
-            color: white;
-            cursor: pointer;
-        }
-
-        label {
-            font-family: arial;
-            font-size: 14px;
-            color: #333333;
-        }
-
-        .entrarysalir {
-            display: block;
-        }
-
-        .closemodal {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 5px;
-            background: #00a82d;
-            width: 35px;
-            height: 35px;
-            border-radius: 100%;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px;
-            line-height: 15px;
-            cursor: pointer;
-        }
-    </style>
-    <div>
-        <div>
-            <form id="formulariowtsp" action="" class="formulariowtsp">
-                <p class="newmessagewts">¡Envianos un mensaje!</p> <span class="closemodal">x</span><br>
-                <label for="">Nombre:</label><br><br>
-                <input id="inputname" class="inputwts" type="text" required="" placeholder="Nombre" autocomplete="off"><br>
-                <label for="">Mensaje:</label><br><br>
-                <textarea id="inputmensaje" name="" id="" cols="30" rows="10" class="textareawts" required=""></textarea>
-                <button type="submit" id="sendbttn" class="btnwtsp">Enviar mensaje</button type="submit">
-            </form>
+    <div id="features" class="block-11 space-between-blocks">
+        <div class="container">
+            <!-- HEADER -->
+            <div class="block__header col-lg-8 col-xl-7 mx-auto text-center">
+                <h1 class="block__title mb-3">Conoce Nuestros <span class="highlight">Servicios</span></h1>
+                <p class="block__paragraph mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard
+                </p>
+            </div>
+            <div class="row align-items-center justify-content-center flex-column-reverse flex-lg-row px-2">
+                <div class="col-lg-4 col-xl-5 p-lg-5">
+                    <img class="w-100" src="assets/imgs/img-3.png">
+                </div>
+                <div class="col-lg-8 col-xl-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-2-1rem">
+                            <div class="card-1 card-1--selected text-center">
+                                <span class="card-1__symbol mx-auto mb-4">
+                  <i class="fas fa-camera-retro"></i>
+                </span>
+                                <h3 class="card-1__title mb-2">Servicio 1</h3>
+                                <p class="card-1__paragraph">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2-1rem">
+                            <div class="card-1 text-center">
+                                <span class="card-1__symbol mx-auto mb-4">
+                  <i class="fas fa-leaf"></i>
+                </span>
+                                <h3 class="card-1__title mb-2">Servicio 2</h3>
+                                <p class="card-1__paragraph">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2-1rem">
+                            <div class="card-1 text-center">
+                                <span class="card-1__symbol mx-auto mb-4">
+                  <i class="fas fa-cog"></i>
+                </span>
+                                <h3 class="card-1__title mb-2">Servicio 3</h3>
+                                <p class="card-1__paragraph">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2-1rem">
+                            <div class="card-1 text-center">
+                                <span class="card-1__symbol mx-auto mb-4">
+                  <i class="fas fa-database"></i>
+                </span>
+                                <h3 class="card-1__title mb-2">Servicio 4</h3>
+                                <p class="card-1__paragraph">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <img id="icon-whatsapp" class="image-icon-whatsapp" src="#" alt="" width="70">
     </div>
-    <!--------------------------------------Chat de WhatsApp---------------------------------------------->
-    <script src="js/header.js"></script>
-    <script src="js/Whatsapp.js"></script>
-    <script src="js/scroll.js"></script>
 
-    <footer>
-        <h5>DISAINAX</h5>
-    </footer>
-
+    <div id="faq" class="block-39 space-between-blocks">
+        <div class="container">
+            <!-- HEADER -->
+            <div class="col-lg-8 col-xl-7 mx-auto text-center mb-5">
+                <h1 class="block__title">Preguntas Frecuentes</h1>
+            </div>
+            <div class="row px-2">
+                <div class="col-lg-6">
+                    <div class="content-block">
+                        <h4 class="content-block__title">
+                            ¿Hacia que pais puede envíar?
+                        </h4>
+                        <p class="content-block__paragraph">
+                            Actualmente estamos trabajando con COLOMBIA, PERÚ, CHILE, VENEZUELA. Sí llega a existir alguna actualización de nuestro servicio de envios de divisas se les notificará con anticipación.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-block">
+                        <h4 class="content-block__title">
+                            ¿Cuántas remesas puedo envíar al día?
+                        </h4>
+                        <p class="content-block__paragraph">
+                            Las que desee, no existe límites de envíos. Trabajamos según nuestro horario y pude solicitar nuestro servicio sin ningun problema.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-block">
+                        <h4 class="content-block__title">
+                            ¿Puedo hacer el envío de mis divisas sin consultar disponibilidad?
+                        </h4>
+                        <p class="content-block__paragraph">
+                            Le recomendamos que no lo haga, puesto que al existir una gran cantidad de clientes cambiando el límite diario de nuestras divisas se agota con mucha rápidez. Lo más recomendable es consultar antes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-block">
+                        <h4 class="content-block__title">
+                            ¿Cómo se cual es la tasa actualizada?
+                        </h4>
+                        <p class="content-block__paragraph">
+                            Esa información la puede ver en nuestras cuentas oficiales o consultarlo por medio de un menjsaje hacia nuestros contáctos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body></html>
+
+    <!-- =================================== -->
+
+    <div id="contact-us" class="block-28 space-between-blocks border-top border-bottom">
+        <div class="container">
+            <div class="row h-100">
+                <div class="col-lg-6 h-100 block-28__content-side">
+                    <div class="contact-info">
+                        <h5 class="contact-info__title mb-3">Nuestros contáctos</h5>
+                        <p class="contact-info__paragraph mb-5">
+                            Solicita información, pregunta por la disponibilidad, asesorate sobre los pasos a seguir e informate con nuestros contáctos oficiales.
+                        </p>
+                        <div class="mb-5">
+                            <h6 class="contact-info__title-2 mb-3">COLLABORATE</h6>
+                            <p class="d-flex flex-column">
+                                <span class="contact-info__item mb-2">disanax@gmail.com</span>
+                                <span class="contact-info__item">(+58)416 7344377</span>
+                            </p>
+                        </div>
+                        <div class="mb-5">
+                            <h6 class="contact-info__title-2 mb-3">COLLABORATE</h6>
+                            <p class="d-flex flex-column">
+                                <span class="contact-info__item mb-2">
+                  <i class="fas fa-phone"></i><span class="mx-2">disanax@gmail.com</span>
+                                </span>
+                                <span class="contact-info__item">
+                  <i class="fas fa-envelope"></i><span class="mx-2">(+58)416 7344377</span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 h-100 block-28__form-side">
+                    <form onsubmit="submitContactForm(event)" class="contact-form text-center">
+                        <div class="contact-form__header mb-5">
+                            <h6 class="contact-form__title mb-3">Escribenos</h6>
+                            <p class="contact-form__paragraph mb-0 mx-auto">
+                                ¡Envíanos un mensaje con tu pregunta!
+                            </p>
+                        </div>
+                        <input type="text" class="contact-form__input" placeholder="Nombre">
+                        <input type="email" class="contact-form__input" placeholder="Correo">
+                        <textarea class="contact-form__input" placeholder="Escribe tu mensaje"></textarea>
+                        <button class="btn btn-primary w-100">Envíar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =================================== -->
+
+    <div class="block-32 space-between-blocks">
+        <div class="container">
+            <!-- HEADER -->
+            <div class="col-lg-8 col-xl-7 mx-auto text-center mb-5">
+                <h1 class="block__title mb-3">Sómos Tu Casa de Confianza</h1>
+                <p class="block__paragraph mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard
+                </p>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">Contáctanos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =================================== -->
+
+    <div class="block-44 py-5">
+        <div class="container">
+            <div class="row px-0 mx-0 justify-content-center align-items-center">
+                <div class="block-44__logo-container">
+                    <img class="block-44__logo" src="assets/imgs/logo.svg">
+                </div>
+                <ul class="block-44__list list-unstyled justify-content-center mb-0">
+                    <li class="block-44__li-1">
+                        <a href="#" class="block-44__link">Affiliate</a>
+                    </li>
+                    <li class="block-44__li-1">
+                        <a href="#" class="block-44__link">Entreprise</a>
+                    </li>
+                    <li class="block-44__li-1">
+                        <a href="#" class="block-44__link">Products</a>
+                    </li>
+                    <li class="block-44__li-1">
+                        <a href="#" class="block-44__link">Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="block-44__divider">
+        <div class="container">
+            <div class="row flex-column flex-md-row px-2 justify-content-center">
+                <div class="flex-grow-1">
+                    <ul class="block-44__extra-links d-flex list-unstyled p-0">
+                        <li class="mx-2">
+                            <a href="#" class="block-44__link m-0">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#" class="block-44__link m-0">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#" class="block-44__link m-0">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="block-41__copyrights">&copy; ECONOMIC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- =================================== -->
+
+    <script src="assets/app.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
